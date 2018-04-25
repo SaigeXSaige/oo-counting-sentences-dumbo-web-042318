@@ -15,8 +15,14 @@ class String
   end
 
   def count_sentences
-    self.split(".").count 
+    array = []
+    self.split.each do |word|
+      if word.sentence? || word.question? || word.exclamation? == true
+        array << word
+      end
+    array.count 
   end
+  
 end
 
 #binding.pry
