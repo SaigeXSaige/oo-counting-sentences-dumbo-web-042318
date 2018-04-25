@@ -20,6 +20,7 @@ class String
       if word.sentence? || word.question? || word.exclamation? == true
         array << word
       end
+    end
     array.count 
   end
   
